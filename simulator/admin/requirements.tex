@@ -1,0 +1,82 @@
+\documentclass{article}
+
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry}
+\geometry{
+	paper=a4paper,
+	top=2cm,
+	bottom=2cm,
+	left=2.5cm,
+	right=2.5cm,
+	headheight=14pt,
+	footskip=1.5cm,
+	headsep=1.2cm,
+}
+
+%----------------------------------------------------------------------------------------
+%	FONT & GLOBALS
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{csquotes}
+
+\usepackage{enumitem,amssymb}
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+\usepackage{pifont}
+
+%----------------------------------------------------------------------------------------
+%	COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT
+%----------------------------------------------------------------------------------------
+
+\title{
+	\vspace{-1.5cm}
+	{\centering\small{HS24 PREN1}\par}
+	\textbf{Requirements - Simulator}
+	\vspace{-1.3cm}
+}
+
+\begin{document}
+\maketitle
+
+\noindent
+The main purpose of this document is to document the simulators requirements and track questions/details
+that need to be addressed.
+
+\begin{itemize}
+
+  \item What exactly is the scope of the functionality that needs to be simulated?
+  \begin{todolist}
+  \item sensors? hardware emulation?
+  \item 3d or 2d graph model? what is expected?
+  \item does a physics engine need to be implemented/pulled in?
+  \end{todolist}
+
+  \item Deployment \& ISA requirements/expectations
+  \begin{todolist}
+  \item on what hardware does the simulator need to run?
+  \item[\done] is cross-compilation to other operating systems required? (linux, windows)
+  \item is cross-compilation to different architectures (isa) required? (x86, aarch64, risc-v)
+  \item how's the software distributed? (expectations of teachers)
+  \item does the code need to be available to the teachers?
+  \end{todolist}
+
+\end{itemize}
+
+\end{document}
